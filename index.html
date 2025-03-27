@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites - Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- header tag -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://th.bing.com/th/id/OIP.0S4pnzzIv4YcD49YmK9ODwHaGK?w=186&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                    alt="Tasty Bites Logo">
+                <span>Tasty Bites</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:3000/food_ordering_web/index.html">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="http://127.0.0.1:3000/food_ordering_web/about/about.html">About</a></li>
+                <li><a href="http://127.0.0.1:3000/food_ordering_web/contact/contact.html">Contact</a></li>
+                <li><button id="cart-btn">Cart <span id="cart-count">0</span></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main tag -->
+    <main>
+        <section id="hero">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="https://wallpapercave.com/wp/wp1874184.jpg" alt="Food Image">
+                    </div>
+                    <div class="slide">
+                        <img src="https://th.bing.com/th/id/OIP.K5oPANhOIUj8GshR-XzztAHaD5?w=295&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                            alt="Food Image">
+                    </div>
+                    <div class="slide">
+                        <img src="https://th.bing.com/th/id/OIP.ffuutaVPs4CKARlIbOyjygHaFI?w=246&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"
+                            alt="Food Image">
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Delicious Food Delivered To Your Door</h1>
+                <p>Order your favorite meals from our curated menu</p>
+            </div>
+            <div class="holi-discount-banner">
+                <i class="fas fa-gift"></i>
+                <span>Happy Holi! Enjoy 30% OFF on all items</span>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for food...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <!-- Menu items will be added dynamically via JavaScript -->
+            </div>
+        </section>
+
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <p>Total: <span id="total-amount">0</span> INR</p>
+                </div>
+                <button id="checkout-btn">Checkout</button>
+                <button id="close-cart">Close</button>
+                <button id="cancel-cart">Cancel Order</button>
+            </div>
+        </div>
+        <!-- Add this before the closing </main> tag -->
+        <div id="rating-modal" class="modal">
+            <div class="modal-content">
+                <h2>Rate this dish</h2>
+                <div class="rating-item-info">
+                    <img id="rating-item-img" src="" alt="">
+                    <h3 id="rating-item-name"></h3>
+                </div>
+                <div class="star-rating">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <textarea id="rating-comment" placeholder="Share your experience (optional)"></textarea>
+                <button id="submit-rating">Submit Rating</button>
+                <button id="close-rating">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer tag -->
+    <footer>
+        <p>&copy; 2024 Tasty Bites. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
